@@ -1,0 +1,190 @@
+.i {
+    display: flex;
+    height: 100vh;
+}
+.i-left {
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.i-right {
+    flex:1;
+    position: relative;
+}
+.i-left-wrapper {
+    padding: 50px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.i-intro {
+    font-size: 30px;
+    font-weight: 300;
+}
+.i-name {
+    font-size: 60px;
+}
+.i-title {
+    height:50px;
+    overflow: hidden;
+}
+.i-title-wrapper {
+    height: 100%;
+    animation: move 10s ease-in-out infinite alternate;
+}
+@keyframes move {
+    50%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(-100px);
+    }
+}
+.i-title-item {
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color:#59b256 ;
+    display: flex;
+    align-items: center;
+}
+.i-scroll {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+}
+.i-img {
+    width: 80%;
+    height: 97vh; 
+    padding-top: 10%;
+    padding-left: 20%;
+    object-fit: cover;
+    position: absolute;
+}
+.i-img:hover {
+    transform: scale(1.07);
+    transition: 1s ease-out;
+}
+.i-bg {
+    clip-path: polygon(100% 0%, 100% 58%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #59b256;
+}
+.profile-options .highlighted-btn{
+    margin: 0 0 0 28px;
+}
+.btn {
+    border-radius: 50px !important;
+    padding: 14px 0;
+    width: 160px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: "Montserrat Medium";
+  }
+  
+  .btn:active {
+    transform: translateY(2px);
+  }
+  
+  .primary-btn {
+    color: white !important ;
+    border: 2px solid linen;
+    font-size: 12px;
+    background-color: #59b256 !important;
+  }
+  
+  .primary-btn:hover {
+    color: white !important; 
+    border: 2px solid #EBEB5E;
+    background-color: #1f2235;
+  }
+  
+  .highlighted-btn {
+    color: #ffffff !important;
+    background-color: #59b256 !important;
+    font-size: 12px;
+  }
+  .highlighted-btn:hover {
+      background-color: #fafad2 !important;
+      color: #111111 !important;
+  }
+@media screen and (max-width: 1080px){
+    .i {
+        flex-direction: row;
+    }
+    .i-left-wrapper {
+        padding: 50px;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }  
+    .profile-options {
+        display: flex;
+        padding: 0px;
+    }
+    .highlighted-btn .primary-btn{
+        margin-top: 10px !important;
+    }
+}
+  @media screen and (max-width: 910px){
+    .i {
+        flex-direction: column;
+    }
+    .i-left-wrapper {
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .i-desc {
+        padding: 10px 50px;
+        font-size: 16px;
+    }
+    .btn {
+        width: 140px;
+        border-radius: 20px !important;
+    }
+    .highlighted-btn .primary-btn {
+        margin-top: 10px !important;
+    }
+}
+@media screen and (max-width: 810px){
+    .i-intro {
+        font-size: 25px;
+    }
+    .i-name {
+        font-size: 55px;
+    }
+    .btn {
+        width: 120px;
+    }
+}
+@media screen and (max-width: 480px){
+    .i-desc {
+        display: none;
+    }
+    .profile-options {
+        display: flex;
+        padding: 0px;
+    }
+    .highlighted-btn {
+        margin-top: 10px !important;
+    }
+    .i-img {
+        width: 80%;
+        height: 48vh; 
+        padding-top: 10%;
+        padding-left: 20%;
+        object-fit: cover;
+        position: absolute;
+    }
+}
